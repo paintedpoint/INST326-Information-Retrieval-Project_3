@@ -1,0 +1,9 @@
+Import Requirements
+
+requests
+pandas
+typing
+time
+datetime
+matplotlib.pyplot
+datetime
