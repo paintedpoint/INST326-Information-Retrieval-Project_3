@@ -103,8 +103,7 @@ class CryptoMarketDisplay:
             else:
                 print("❌ Invalid choice.")
 
-    def __str__(self):
-        return f"CryptoMarketDisplay({len(self._data)} assets loaded)"
-
-    def __repr__(self):
         return f"CryptoMarketDisplay(rows={len(self._data)})"
+    
+
+    

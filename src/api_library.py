@@ -201,7 +201,7 @@ class PullData:
                  for crypto_id, info in data.items()}
         
         return prices
-    
+
 class CryptoPortfolio:
     """
     Class to manage cryptocurrency purchases and sales
