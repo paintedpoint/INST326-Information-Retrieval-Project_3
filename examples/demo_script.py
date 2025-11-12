@@ -1,6 +1,6 @@
 import sys, os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
-from src import PullData, CryptoPortfolio, display_market_data, user_interaction, summarize_market_performance, MarketData, Portfolio_Helper, Price_Charts_Graphs
+from src import PullData, CryptoPortfolio, CryptoAsset, Transaction, User, MarketData, Portfolio_Helper, Price_Charts_Graphs, CryptoMarketDisplay
 
 
 dataPuller = PullData()
