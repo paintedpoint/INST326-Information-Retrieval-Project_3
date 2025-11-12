@@ -94,6 +94,7 @@ class CryptoAsset:
 
     def __str__(self):
         return f"{self._name} ({self._symbol.upper()}): ${self._current_price:.2f}"
+
 from datetime import datetime
 
 class Transaction:
@@ -128,6 +129,7 @@ class Transaction:
             return f"[{ts}] BUY {self._amount} {self._crypto_id} @ ${self._price:.2f}"
         else:
             return f"[{ts}] SELL {self._amount} {self._crypto_id} @ ${self._price:.2f} (Profit: ${self._profit:.2f})"
+
 from typing import Dict, List
 
 class CryptoPortfolio:
