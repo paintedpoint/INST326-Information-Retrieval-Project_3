@@ -33,7 +33,7 @@ Which Chart do you want?
 2) 24h Change Chart
 3) Nevermind
 """
-)
+            )
             while(True):
                 if choice == "1":
                     print("\n * Generating Price Chart...")
