@@ -273,7 +273,31 @@ class Portfolio:
         return round(self.funds, 2)
 
     def seePortfolioValue(self) -> float:
-        pass
+        if not self._transactions:
+            return 0.0
+
+        # Track net amount held for each crypto
+        holdings = {}
+        for t in self._transactions:
+            if t.crypto_id not in holdings:
+                holdings[t.crypto_id] = 0
+
+            # Add or subtract depending on transaction type
+            if isinstance(t, Buy):
+                holdings[t.crypto_id] += t.amount
+            elif isinstance(t, Sell):
+                holdings[t.crypto_id] -= t.amount
+        datapuller = PullData()
+        prices = datapuller.get_current_price(list(holdings.keys()))
+
+        # Calculate total market value
+        total_value = 0.0
+        for coin, amt in holdings.items():
+            if coin in prices:
+                total_value += prices[coin] * amt
+
+        return round(total_value, 2)
+
 
 
     
